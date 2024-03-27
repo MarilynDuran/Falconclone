@@ -22,6 +22,8 @@
 }
 
 .card-content {
+  display: flex;
+  flex-direction: row;
   width: inherit;
   height: 120px;
   padding: 20px;
@@ -32,6 +34,7 @@
 .card-header h6 {
   margin: 0rem;
   padding: 0rem;
+  font-size: 0.7rem;
   color: #344050;
 }
 
@@ -66,6 +69,13 @@
     padding-right: 0.71111em;
     padding-left: 0.71111em;
     border-radius: 10rem;
+}
+
+.right-container{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content:  flex-end;
 }
 
 /* QUERYS */
