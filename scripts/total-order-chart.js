@@ -4,10 +4,16 @@ var myChart = echarts.init(chartDom);
 var option = {
   xAxis: {
     type: 'category',
-    data: ['Week 4', 'Week 5']
+    data: ['Week 4', 'Week 5'],
+    splitLine: {
+      show: false
+    },
   },
   yAxis: {
-    type: 'value'
+    type: 'value',
+    splitLine: {
+      show: false
+    },
   },
   series: [
     {
