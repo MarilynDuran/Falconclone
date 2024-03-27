@@ -11,10 +11,12 @@
         <title>Falcon React | React JS Dashboard & WebApp Template</title>
     </head>
     <body>
+        <!-- CREO LA PRIMERA TARJETA -->
         <div class="card-global">
+            <!-- PARTE SUPERIOR DE LA TARJETA -->
             <div class="card-header">
                 <h6>Weekly Sales</h6>
-                <div class="interrogation-svg">
+                <div class="interrogation-svg" id="interrogation-svg">
                     <svg xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" data-prefix="far" data-icon="question-circle" class="svg-inline--fa fa-question-circle fa-w-16 text-400" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="weeklySalesTooltip" style="transform-origin: 0.5em 0.5em;" width="512" height="512">
                         <g transform="translate(256 256)">
                             <g transform="translate(0, 0)  scale(0.9375, 0.9375)  rotate(0 0 0)">
@@ -25,13 +27,16 @@
                     </svg>
                 </div>
             </div>
+            <!-- PARTE INFERIOR DE LA TARJETA -->
             <div class="card-content">
+                <!-- DATOS IZQUIERDA -->
                 <div class="left-container">
                     <div class="left-content">
                         <p>$43K</p>
                         <span>+3,5%</span>
                     </div>
                 </div>
+                <!-- TABLA DERECHA -->
                 <div class="right-container">
                         <div id="weekly-chart" style="width: 136px; height: 61px"></div>
                 </div>
@@ -43,6 +48,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
         <!-- JAVASCRIPT -->
         <script src="/scripts/weekly-chart.js"></script>
+        <script src="/scripts/interrogation-hover.js"></script>
     </body>
 </html>
 

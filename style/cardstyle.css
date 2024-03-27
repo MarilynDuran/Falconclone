@@ -3,6 +3,7 @@
 /* CARD STYLES */
 
 .card-global {
+  position: relative;
   width: 342px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -43,6 +44,8 @@
   height: 14px;
   padding-left: 3px;
   padding-top: 1px;
+
+  cursor: pointer;
 }
 
 /* CARD CONTENT STYLES */
@@ -76,6 +79,23 @@
   flex: 1;
   align-items: center;
   justify-content:  flex-end;
+}
+
+/* TARJETA HOVER SVG INTERROGACION */
+
+.tarjeta-hover{
+  position: absolute;
+  border: solid  black 1px;
+  width: 10rem;
+  align-items: center;
+  justify-self: center;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8)
+}
+
+.tarjeta-hover p {
+  color: rgb(255, 255, 255);
+  font-size: small;
 }
 
 /* QUERYS */
