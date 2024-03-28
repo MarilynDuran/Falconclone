@@ -13,23 +13,43 @@
     <body>
         <!-- CREO LA PRIMERA TARJETA -->
         <div class="card-global">
-            <!-- PARTE SUPERIOR DE LA TARJETA -->
-            <div class="card-header">
-                <h6>Total Orders</h6>
-            </div>
-            <!-- PARTE INFERIOR DE LA TARJETA -->
-            <div class="card-content">
-                <!-- DATOS IZQUIERDA -->
-                <div class="left-container">
-                    <div class="left-content">
-                        <p>58.4K</p>
-                        <span>↑13.6%</span>
+            <div class="mk-shr-card-content">
+                <div class="mk-shr-left">
+                    <h6>Market Share</h6>
+                    <div class="mk-shr-brands">
+                        <div class="mk-shr-onebrand">
+                            <div>
+                                <span class="dot" style=" background-color: rgb(44, 123, 229)"></span>
+                                <span class="mk-brand-fontstyle">Samsung</span>
+                            </div>
+                            <div class="mk-percentage">
+                                <span>58%</span>
+                            </div>
+                        </div>
+                        <div class="mk-shr-onebrand">
+                            <div>
+                                <span class="dot" style=" background-color: rgb(39, 188, 253)"></span>
+                                <span class="mk-brand-fontstyle">Huawei</span>
+                            </div>
+                            <div class="mk-percentage">
+                                <span>21%</span>
+                            </div>
+                         </div>
+                        <div class="mk-shr-onebrand">
+                            <div>
+                                <span class="dot" style=" background-color: rgb(216, 226, 239)"></span>
+                                 <span class="mk-brand-fontstyle">Apple</span>
+                            </div>
+                            <div class="mk-percentage">
+                                <span>22%</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- TABLA DERECHA -->
-                <div class="right-container">
-                    <div id="total-order-chart" style="width: 136px; height: 61px"></div>
+                <div class="mk-chart-container">
+                    <div id="mk-shr-chart" style="width: 106px; height: 106px"></div>
                 </div>
+                
             </div>
         </div>
         <!-- BOOSTRAP -->
@@ -37,6 +57,6 @@
         <!-- ECHARTS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
         <!-- JAVASCRIPT -->
-        <script src="/scripts/total-order-chart.js"></script>
+        <script src="/scripts/market-share-chart.js"></script>
     </body>
 </html>
