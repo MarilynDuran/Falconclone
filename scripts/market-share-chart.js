@@ -3,6 +3,7 @@ var myChart = echarts.init(chartDom);
 var option;
 
 option = {
+  color: ['#2c7be5', '#27bcfd', '#d8e2ef'],
   tooltip: {
     trigger: 'item'
   },
