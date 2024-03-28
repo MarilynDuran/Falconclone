@@ -11,9 +11,11 @@ option = {
     left: 'center',
     show: false,
   },
+  stateAnimation: {
+    animationDuration: 0,
+  },
   series: [
     {
-      name: 'Access From',
       type: 'pie',
       radius: ['90%', '100%'],
       avoidLabelOverlap: false,
@@ -22,24 +24,26 @@ option = {
         show: false,
         position: 'center'
       },
-      setOption: {
-        animation: false,
+      tooltip: {
+        
       },
-      /* emphasis: {
+      emphasis: {
+        scale: false,
         label: {
           show: false,
           fontSize: 40,
           fontWeight: 'bold'
         }
-      }, */
-      labelLine: {
-        show: false
       },
+      labelLine: {
+        show: false,
+      },
+      animation: false,
       data: [
         { value: 58, name: 'Samsung' },
         { value: 21, name: 'Direct' },
         { value: 22, name: 'Email' },
-      ]
+      ],
     }
   ]
 };
