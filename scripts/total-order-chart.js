@@ -8,16 +8,28 @@ var option = {
     splitLine: {
       show: false
     },
+    axisLabel: {
+      show: false
+    },
+    grid: {
+      show: false
+    },
   },
   yAxis: {
     type: 'value',
     splitLine: {
       show: false
     },
+    axisLabel: {
+      show: false
+    },
+    grid: {
+      show: false
+    },
   },
   series: [
     {
-      data: [15000, 43400],
+      data: [150, 434],
       type: 'line',
       smooth: true,
     }
