@@ -1,5 +1,14 @@
 @import 'basicstyles';
 
+/* FIRST 4 GRID STYLE */
+
+.first-4-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 /* CARD STYLES */
 
 .card-global {
@@ -56,7 +65,7 @@
     flex-direction: column;
 }
 
-.left-content p{
+.left-content .left-content1 p{
     margin: 0px;
     color: #5e6e82;
     font-size: 2.0736rem;
@@ -74,6 +83,18 @@
     padding-right: 0.71111em;
     padding-left: 0.71111em;
     border-radius: 10rem;
+}
+
+.left-content1 span{
+  font-size: .69444rem;
+  font-weight: bolder;
+  color: #00864e;
+  background-color: #ccf6e4;
+  font-family: var(--font-family-sans-serif);
+
+  padding-right: 0.71111em;
+  padding-left: 0.71111em;
+  border-radius: 10rem;
 }
 
 /* ESTILO DIV GRAFICO */
