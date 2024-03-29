@@ -1,4 +1,4 @@
-@import 'basicstyles';
+@import "basicstyles";
 
 /* FIRST 4 GRID STYLE */
 
@@ -13,8 +13,8 @@
 .card-global {
   position: relative;
   width: 342px;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-right: 0.66rem;
+  margin-bottom: 0.66rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
@@ -35,7 +35,6 @@
   align-items: center;
 }
 
-
 .card-content {
   display: flex;
   flex-direction: row;
@@ -47,10 +46,11 @@
 /* CARD HEADER CONTENT STYLE */
 
 .card-header h6 {
-  margin: 0rem;
+  margin: 4px 0 8px;
   padding: 0rem;
+  margin-top: 0.5rem;
+  font-size: 13.3333px;
   font-family: var(--font-family-sans-serif);
-  font-size: 0.7rem;
   color: #344050;
 }
 
@@ -64,33 +64,41 @@
 }
 
 /* CARD CONTENT STYLES */
-.left-upper-content{
-    display: flex;
-    flex-direction: column;
+.left-upper-content {
+  display: flex;
+  flex-direction: column;
 }
 
-.left-content .left-content1 p{
-    margin: 0px;
-    color: #5e6e82;
-    font-size: 2.0736rem;
-    font-weight: 400;
-    font-family: var(--font-family-sans-serif);
+.left-content p {
+  margin: 0px;
+  color: #5e6e82;
+  font-size: 2.0736rem;
+  font-weight: 400;
+  font-family: var(--font-family-sans-serif);
 }
 
-.left-content span{
-    font-size: .69444rem;
-    font-weight: bolder;
-    color: #1978a2;
-    background-color: #d4f2ff;
-    font-family: var(--font-family-sans-serif);
-
-    padding-right: 0.71111em;
-    padding-left: 0.71111em;
-    border-radius: 10rem;
+.paragraph-percentage {
+  margin: 0px;
+  color: #5e6e82;
+  font-size: 2.0736rem;
+  font-weight: 400;
+  font-family: var(--font-family-sans-serif);
 }
 
-.left-content1 span{
-  font-size: .69444rem;
+.left-content span {
+  font-size: 0.69444rem;
+  font-weight: bolder;
+  color: #1978a2;
+  background-color: #d4f2ff;
+  font-family: var(--font-family-sans-serif);
+
+  padding-right: 0.71111em;
+  padding-left: 0.71111em;
+  border-radius: 10rem;
+}
+
+.left-content1 span {
+  font-size: 0.69444rem;
   font-weight: bolder;
   color: #00864e;
   background-color: #ccf6e4;
@@ -103,15 +111,14 @@
 
 /* ESTILO DIV GRAFICO */
 
-.right-container{
+.right-container {
   display: flex;
   flex: 1;
   align-items: center;
-  justify-content:  flex-end;
+  justify-content: flex-end;
 }
 
 /* MARKET SHARE CARD */
-
 
 .mk-shr-card-content {
   display: flex;
@@ -139,17 +146,17 @@
 }
 
 .mk-shr-onebrand {
- display: flex;
- flex-direction: row;
- align-items: center;
- justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .mk-brand-fontstyle {
   font-size: 11.11px;
 }
 
-.mk-shr-brands{
+.mk-shr-brands {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -172,7 +179,7 @@
   position: relative;
 }
 
-.mk-num-chart span{
+.mk-num-chart span {
   position: absolute;
   top: 31%;
   left: 31%;
@@ -180,6 +187,35 @@
   color: #0b1727;
 }
 
+/* WEATHER ONLY STYLES */
+
+.card-header-weather {
+  display: flex;
+  flex-direction: row;
+  height: 32px;
+  width: inherit;
+  padding: 16px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header-weather h6 {
+  margin: 4px 0 8px;
+  padding: 0rem;
+  margin-top: 0.5rem;
+  font-size: 13.3333px;
+  font-family: var(--font-family-sans-serif);
+  color: #344050;
+}
+
+.weather-buttom-style {
+  text-decoration: none;
+}
+
+.weather-buttom-style svg {
+  width: 1rem;
+  height: 0.5rem;
+}
 
 /* QUERYS */
 
@@ -217,7 +253,7 @@
     width: 523px;
   }
 
-  .mk-shr-left{
+  .mk-shr-left {
     width: 41%;
     flex: 0 0 41%;
   }
