@@ -5,8 +5,7 @@
 .first-4-grid {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 0px;
-  margin-right: 0px;
+  max-width: 1400px;
 }
 
 /* CARD STYLES */
@@ -14,11 +13,16 @@
 .card-global {
   position: relative;
   width: 342px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
-  margin: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.first-4-grid > .card-global:last-child {
+  margin-right: 0;
 }
 
 .card-header {
@@ -35,7 +39,7 @@
 .card-content {
   display: flex;
   flex-direction: row;
-  width: inherit;
+  width: 100%;
   height: 120px;
   padding: 20px;
 }
@@ -113,7 +117,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  width: inherit;
+  width: 100%;
   height: 152px;
   padding: 20px;
 }
