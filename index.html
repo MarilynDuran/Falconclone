@@ -177,13 +177,28 @@
           </button>
         </div>
         <!-- PARTE INFERIOR DE LA TARJETA -->
-        <div class="card-content">
-          <!-- DATOS IZQUIERDA -->
-          <div class="left-container">
-            <div class="left-content"></div>
+        <div>
+          <div class="weather-cardbody">
+            <div class="weather-content">
+              <div class="weather-left-container">
+                <img
+                  src="/images/img-pablo-1.png"
+                  style="width: 60px; height: 60px; margin-right: 1rem"
+                />
+                <div class="weather-text" id="weather-text">
+                  <!-- <h6>New York City</h6> -->
+                  <!-- <div class="orange-text">"Sunny"</div> -->
+                  <!-- <div class="grey-text-weather">Precipitation: 50%</div> -->
+                </div>
+              </div>
+              <div class="weather-temperature" id="weather-temperature">
+                <div class="temp-blue-upper" id="temp-blue-upper">
+                  <!-- <span>31°</span> -->
+                </div>
+                <!-- <div class="temp-gray-down" id="temp-gray-down">32° / 25°</div> -->
+              </div>
+            </div>
           </div>
-          <!-- TABLA DERECHA -->
-          <div class="right-container"></div>
         </div>
       </div>
     </div>
@@ -201,5 +216,6 @@
     <script src="/scripts/interrogation-hover.js"></script>
     <script src="/scripts/total-order-chart.js"></script>
     <script src="/scripts/weekly-chart.js"></script>
+    <script src="/scripts/weather-api-request.js"></script>
   </body>
 </html>

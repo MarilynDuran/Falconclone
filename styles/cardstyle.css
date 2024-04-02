@@ -64,6 +64,7 @@
 }
 
 /* CARD CONTENT STYLES */
+
 .left-upper-content {
   display: flex;
   flex-direction: column;
@@ -210,11 +211,67 @@
 
 .weather-buttom-style {
   text-decoration: none;
+  border: none;
+  background-color: white;
+  animation: transform 1s ease-in-out;
+}
+
+.weather-buttom-style:hover {
+  border: solid 1px rgb(173, 173, 173);
+  border-radius: 20%;
 }
 
 .weather-buttom-style svg {
   width: 1rem;
   height: 0.5rem;
+}
+
+.weather-cardbody {
+  padding: 1.25rem;
+}
+
+.weather-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-left-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.weather-text h6{
+  margin: 4px 0 8px;
+  padding: 0rem;
+  margin-top: 0.5rem;
+  font-size: 13.3333px;
+  font-family: var(--font-family-sans-serif);
+  color: #344050;
+}
+
+.orange-text{
+  color: orange;
+  font-weight: 600;
+  font-size: .69444rem
+}
+
+.grey-text-weather {
+  font-weight: 600;
+  font-size: .69444rem;
+  color: rgb(145, 145, 145);
+}
+
+.weather-temperature {
+  display: flex;
+  flex-direction: column;
+}
+
+.temp-blue-upper span{
+  font-size: 2.07rem;
+  color: #2c7be5;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  font-family: var(--font-family-sans-serif);
 }
 
 /* QUERYS */
