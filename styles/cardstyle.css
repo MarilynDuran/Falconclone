@@ -237,7 +237,7 @@
 
 .weather-left-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
 }
 
 .weather-text h6{
@@ -272,6 +272,12 @@
   font-weight: 400;
   margin-bottom: 0.25rem;
   font-family: var(--font-family-sans-serif);
+}
+
+.img-weather {
+  width: 60px;
+  height: 60px;
+  margin-right: 1rem;
 }
 
 /* QUERYS */

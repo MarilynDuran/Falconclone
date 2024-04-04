@@ -2,7 +2,7 @@ async function getWeather() {
     try {
         // Declaramos el ID de la ciudad y la API key
         const cityId = '524901';
-        const apiKey = 'f7ba02b7fc7028e2167e37c8ceb14b87';
+        const apiKey = '47b790fd0fc41878c80c57c9846132cb';
 
         // Fetch para obtener los datos de la API
         const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?id=${cityId}&appid=${apiKey}`);
@@ -14,6 +14,15 @@ async function getWeather() {
         const containerDivL = document.getElementById('weather-text');
         const containerDivRightUp = document.getElementById('temp-blue-upper');
         const containerDivRightDown = document.getElementById('weather-temperature');
+        const containerLeftImg = document.getElementById('weather-left-container');
+
+        if (weatherData.list[0].weather[0].icon) {
+            const icon = document.createElement('img');
+
+            icon.src = "http://openweathermap.org/img/wn/" + weatherData.list[0].weather[0].icon + "@2x.png";
+            icon.classList.add('img-weather')
+            containerLeftImg.appendChild(icon);
+        }
 
         if (weatherData.city.name) {
             // Creamos el elemento para meter el nombre de la ciudad
@@ -90,7 +99,7 @@ async function getWeather() {
 
             containerDivRightDown.appendChild(maxAndMin);
         }
-        
+
     } catch(error) {
         console.error('Error en la obtención de los datos:', error);
     }
