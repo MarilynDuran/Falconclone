@@ -66,7 +66,7 @@ async function getWeather() {
 
             containerDivL.appendChild(precipitationData);
 
-        } else {
+        } else { 
 
             const precipitationData = document.createElement('div');
             precipitationData.textContent = 'Precipitation: 0%'
