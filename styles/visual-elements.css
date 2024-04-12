@@ -1,0 +1,19 @@
+.running-card-header {
+    height: 65px;
+
+    .running-header-text h6{
+        font-family: "Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-weight: 500;
+        line-height: 1.2;
+        color: #344050;
+        font-size: 0.8rem;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 1rem 1.25rem;
+    }
+    
+    .select-position {
+        padding-right: 10px;
+    }
+}
+
