@@ -1,44 +1,108 @@
-.boton {
-  .menu-btn {
-    width: 30px;
-    height: 20px;
-    position: relative;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 0;
-  }
-
-  .btn-line {
-    width: 100%;
-    height: 2px;
-    background-color: #000;
-    position: absolute;
-    transition: transform 0.3s ease;
-  }
-
-  #line1 {
-    top: 0;
-  }
-
-  #line2 {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  #line3 {
-    bottom: 0;
-  }
-
-  .menu-btn.active #line1 {
-    width: 80%;
-  }
-
-  .menu-btn.active #line2 {
-    width: 50%;
-  }
-
-  .menu-btn.active #line3 {
-    width: 70%;
-  }
+.container {
+  max-width: 1480px;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
+
+.boton .menu-btn {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.boton .btn-line {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  transition: width 0.3s ease;
+}
+
+.boton #line1 {
+  top: 0;
+  width: 80%;
+}
+
+.boton #line2 {
+  top: 50%;
+  width: 50%;
+}
+
+.boton #line3 {
+  bottom: 0;
+  width: 70%;
+}
+
+.menu-btn.active #line1,
+.menu-btn.active #line2,
+.menu-btn.active #line3 {
+  width: 100%;
+}
+
+
+
+.vertical-menu .navbar {
+  position: absolute;
+  top: 30px; /* Ajusta la posición según tus necesidades */
+  left: 0px; /* Este será el valor inicial para ocultar la navbar */
+  width: 200px; /* Ancho inicial */
+  background-color: #EDF2F996;
+  padding: 10px;
+  transition: left 0.3s ease; /* Transición para suavizar el desplazamiento */
+  border: 1px black;
+}
+
+.vertical-menu .menu-icons {
+  list-style-type: none;
+  padding: 0;
+}
+
+.vertical-menu .menu-icons li {
+  margin-bottom: 10px;
+}
+
+.vertical-menu .menu-text {
+  list-style-type: none;
+  padding: 0;
+}
+
+.vertical-menu .menu-text li {
+  margin-bottom: 10px;
+  display: none; /* Oculta los nombres de las secciones inicialmente */
+}
+
+.menu-icons li svg {
+  width: 1rem;
+}
+
+
+/* CSS para la barra de navegación con anchura estrecha */
+.navbar.narrow {
+  width: 50px; /* Define la anchura estrecha */
+
+}
+
+/* CSS para la barra de navegación con anchura amplia */
+.navbar.wide {
+  width: 200px; /* Define la anchura amplia */
+}
+
+/* Ocultar texto cuando el botón no está activo (estrecho) */
+.menu-icons li .menu-text {
+  display: none; /* Ocultar el texto */
+}
+
+/* Mostrar texto solo cuando el botón está activo (ampliado) */
+.navbar:not(.active) .menu-icons li .menu-text {
+  display: inline; /* Mostrar el texto en línea */
+  margin-left: 10px; /* Espacio entre el ícono y el texto */
+}
+
