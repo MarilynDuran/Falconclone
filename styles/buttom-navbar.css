@@ -58,12 +58,15 @@
   padding: 10px;
   transition: left 0.3s ease; /* Transición para suavizar el desplazamiento */
   border: 1px black;
+  font-family: var(--font-family-sans-serif);
 }
 
 .vertical-menu .menu-icons {
   list-style-type: none;
   padding: 0;
 }
+
+
 
 .vertical-menu .menu-icons li {
   margin-bottom: 10px;
@@ -86,23 +89,85 @@
 
 /* CSS para la barra de navegación con anchura estrecha */
 .navbar.narrow {
-  width: 50px; /* Define la anchura estrecha */
+  width: 200px; /* Define la anchura estrecha */
 
 }
 
 /* CSS para la barra de navegación con anchura amplia */
 .navbar.wide {
-  width: 200px; /* Define la anchura amplia */
+  width: 50px; /* Define la anchura amplia */
 }
 
 /* Ocultar texto cuando el botón no está activo (estrecho) */
-.menu-icons li .menu-text {
+.menu-icons li  details summary .menu-text {
   display: none; /* Ocultar el texto */
 }
 
 /* Mostrar texto solo cuando el botón está activo (ampliado) */
-.navbar:not(.active) .menu-icons li .menu-text {
+.navbar.active .menu-icons li details summary .menu-text {
   display: inline; /* Mostrar el texto en línea */
   margin-left: 10px; /* Espacio entre el ícono y el texto */
 }
 
+.menu-icons li  .menu-text-nodropdown {
+  display: none; /* Ocultar el texto */
+}
+
+/* Mostrar texto solo cuando el botón está activo (ampliado) */
+.navbar.active .menu-icons li .menu-text-nodropdown {
+  display: inline; /* Mostrar el texto en línea */
+  margin-left: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.navbar.active summary::marker {
+  content: '';
+}
+
+summary::marker {
+  content: '';
+}
+
+summary {
+  position: relative;
+}
+
+.navbar.active summary::after {
+  content: '';
+    display: block;
+    position: absolute;
+    right: 5px;
+    height: 0.4rem;
+    width: 0.4rem;
+    border-right: 1px solid #5e6e82;
+    border-bottom: 1px solid #5e6e82;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    transition: all .2s ease-in-out;
+    transform-origin: center;
+    transition-property: transform;
+}
+
+.navbar.active details[open] summary::after {
+  transform: translateY(-50%) rotate(225deg);
+}
+
+.navbar.active details[open] ul li details[open] summary::after{
+  transform: translateY(-50%) rotate(225deg);
+}
+
+.navbar.active details[open] ul li{
+  font-size: small;
+  font-weight: 500;
+}
+
+li::marker {
+  content: '';
+}
+
+.opened li{
+  text-decoration: none;
+}
+
+.menu-text-nodropdown {
+  margin-left: 10px;
+}
