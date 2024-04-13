@@ -1,0 +1,49 @@
+.badge {
+    display: inline-block;
+    padding: .35556em .71111em;
+    font-size: 75%;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+
+    &.pill {
+        padding-inline: .71111em;
+        border-radius: 10rem;
+    }
+
+    &.badge-primary { color: #fff; background-color: var(--primary);}
+    &.badge-secondary { color: #fff; background-color: var(--secondary); }
+    &.badge-success { color: #fff; background-color: var(--success); }
+    &.badge-danger { color: #fff; background-color: var(--danger); }
+    &.badge-info { color: #fff; background-color: var(--info); }
+    &.badge-light { color: var(--gray-dark); background-color: var(--light); }
+    &.badge-dark { color: #fff; background-color: var(--dark); }
+    
+    &.badge-soft-primary { color: #1c4f93; background-color: #d5e5fa; }
+    &.badge-soft-secondary { color: #7d899b; background-color: #e3e6ea; }
+    &.badge-soft-success { color: #00864e; background-color: #ccf6e4; }
+    &.badge-soft-danger { color: #932338; background-color: #fad7dd; }
+    &.badge-soft-warning { color: #c46632; background-color: #fde6d8; }
+    &.badge-soft-info { color: #1978a2; background-color: #d4f2ff; }
+    &.badge-soft-light { color: #9fa0a2; background-color: #fefeff; }
+    &.badge-soft-dark { color: #070f19; background-color: #ced1d4; }
+   
+}
+
+[data-theme="dark"] .badge {
+
+    &.badge-light { color: #fff; }
+    &.badge-light { color: #000; }
+
+    &.badge-soft-primary { color: #78abee; background-color: #142f53; }
+    &.badge-soft-secondary { color: #6d7b8e; background-color: #223043; }
+    &.badge-soft-success { color: #5ce2aa; background-color: #0b403e; }
+    &.badge-soft-danger { color: #ef7f93; background-color: #392137; }
+    &.badge-soft-warning { color: #f79965; background-color: #3c3032; }
+    &.badge-soft-light { color: #687280; background-color: #0f1d31; }
+    &.badge-soft-dark { color: #fbfcfe; background-color: #3d4858; }
+
+}
