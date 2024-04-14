@@ -53,7 +53,7 @@
   position: absolute;
   top: 30px; /* Ajusta la posición según tus necesidades */
   left: 0px; /* Este será el valor inicial para ocultar la navbar */
-  width: 200px; /* Ancho inicial */
+  width: 50px; /* Ancho inicial */
   background-color: #EDF2F996;
   padding: 10px;
   transition: left 0.3s ease; /* Transición para suavizar el desplazamiento */
@@ -93,10 +93,6 @@
 
 }
 
-/* CSS para la barra de navegación con anchura amplia */
-.navbar.wide {
-  width: 50px; /* Define la anchura amplia */
-}
 
 /* Ocultar texto cuando el botón no está activo (estrecho) */
 .menu-icons li  details summary .menu-text {
@@ -147,17 +143,28 @@ summary {
     transition-property: transform;
 }
 
-.navbar.active details[open] summary::after {
+.navbar.active details[open] > summary::after {
   transform: translateY(-50%) rotate(225deg);
 }
 
+
+
 .navbar.active details[open] ul li details[open] summary::after{
   transform: translateY(-50%) rotate(225deg);
-}
+} 
 
 .navbar.active details[open] ul li{
   font-size: small;
   font-weight: 500;
+}
+
+.navbar.active hr{
+  display: block;
+  position: relative;
+}
+
+hr{
+  width: 100%;
 }
 
 li::marker {
@@ -170,4 +177,47 @@ li::marker {
 
 .menu-text-nodropdown {
   margin-left: 10px;
+}
+
+
+.menu-icons li span {
+  cursor: pointer;
+}
+
+
+.vertical-menu{
+  svg{
+    cursor: pointer;
+  }
+  
+  span{
+    cursor: pointer;
+  }
+  
+  li{
+    cursor: pointer;
+  }
+}
+
+summary:hover {
+  color:#232e3c;
+}
+
+.hover-black:hover{
+  color: #232e3c;
+}
+
+details ul li:hover{
+  color: #232e3c;
+}
+
+.purchase-button{
+  display: none;
+  text-align: center;
+}
+
+.navbar.active .purchase-button{
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
 }
