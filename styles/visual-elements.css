@@ -17,3 +17,19 @@
     }
 }
 
+/* BOTON DE PURCHASE */
+
+.purchase-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1a68d1;
+    border-color: #1862c6;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.purchase-button:hover{
+    background-color: #2c7be5;
+    border-color: #2c7be5;
+}
