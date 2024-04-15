@@ -90,7 +90,6 @@
 /* CSS para la barra de navegación con anchura estrecha */
 .navbar.narrow {
   width: 200px; /* Define la anchura estrecha */
-
 }
 
 
@@ -197,6 +196,16 @@ li::marker {
   li{
     cursor: pointer;
   }
+  .menu-text{
+    font-size: .875rem;
+    font-weight: 500;
+  }
+
+  .menu-text-nodropdown{
+    font-size: .875rem;
+    font-weight: 500;
+  }
+  
 }
 
 summary:hover {
