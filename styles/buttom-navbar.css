@@ -93,25 +93,33 @@
   width: 200px; /* Define la anchura estrecha */
 }
 
+.menu-icons .menu-text-nodropdown {
+  margin-left: 10px; /* Espacio entre el ícono y el texto */
+  transition: opacity 300ms ease-out
+}
+
+.menu-icons .menu-text {
+  margin-left: 10px; /* Espacio entre el ícono y el texto */
+  transition: opacity 300ms ease-out
+}
 
 /* Ocultar texto cuando el botón no está activo (estrecho) */
 .menu-icons li  details summary .menu-text {
-  display: none; /* Ocultar el texto */
+  opacity: 0; /* Ocultar el texto */
 }
 
 /* Mostrar texto solo cuando el botón está activo (ampliado) */
 .navbar.active .menu-icons li details summary .menu-text {
-  display: inline; /* Mostrar el texto en línea */
-  margin-left: 10px; /* Espacio entre el ícono y el texto */
+  opacity: 1; /* Mostrar el texto en línea */
 }
 
 .menu-icons li  .menu-text-nodropdown {
-  display: none; /* Ocultar el texto */
+  opacity: 0; /* Ocultar el texto */
 }
 
 /* Mostrar texto solo cuando el botón está activo (ampliado) */
 .navbar.active .menu-icons li .menu-text-nodropdown {
-  display: inline; /* Mostrar el texto en línea */
+  opacity: 1; /* Mostrar el texto en línea */
   margin-left: 10px; /* Espacio entre el ícono y el texto */
 }
 
