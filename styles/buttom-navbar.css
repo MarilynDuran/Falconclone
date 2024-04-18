@@ -229,17 +229,8 @@ li::marker {
   
 }
 
-summary:hover {
-  color:#232e3c;
-}
 
-.hover-black:hover{
-  color: #232e3c;
-}
 
-details ul li:hover{
-  color: #232e3c;
-}
 
 .purchase-button{
   display: none;
@@ -250,4 +241,16 @@ details ul li:hover{
   display: block;
   width: 100%;
   border-radius: 0.5rem;
+}
+
+.hover:hover{
+  color:#232e3c;
+}
+
+summary:hover{
+  color:#232e3c;
+}
+
+.hover-black:hover{
+  color:#232e3c;
 }
