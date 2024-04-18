@@ -24,19 +24,24 @@ let monthData = [
     [90, 90, 40, 60, 40, 110, 90, 110, 60, 80, 60, 70, 80],
     [50, 80, 50, 80, 50, 80, 120, 80, 50, 120, 110, 110, 120],
     [60, 90, 60, 70, 40, 70, 100, 140, 30, 40, 30, 70, 180],
+    [20, 40, 20, 50, 30, 80, 120, 100, 30, 40, 30, 70, 80],
     [20, 40, 20, 50, 30, 80, 120, 100, 30, 40, 30, 70, 80]
 ];
 
 let currentAxis = monthAxis[0];
 let currentData = monthData[0];
-let currentMonth = 7 //Aqui tiene que ir el value del select
+let selectElement = document.getElementById('totalMonthSelect')
+let currentMonth = selectElement.value //Aqui tiene que ir el value del select
+selectElement.addEventListener('change', changeTotalSalesMonth)
 
-function changeTotalSalesMonth(choosenMonth){
-    currentAxis = monthAxis[choosenMonth];
-    currentData = monthData[choosenMonth];
+function changeTotalSalesMonth(event){
+    const choosenMonth = event.target.value
+    option.xAxis.data = monthAxis[choosenMonth];
+    option.series[0].data = monthData[choosenMonth];
+    myChart.setOption(option);
+    console.log(choosenMonth)
+    console.log(event)
 };
-
-changeTotalSalesMonth(currentMonth)
 
 var dom = document.getElementById('container');
 var myChart = echarts.init(dom, null, {
@@ -56,7 +61,7 @@ option = {
         type: 'value'
     },
     grid:{
-        width: '100%',
+        width: '80%',
         height: '70%'
     },
     series: [
@@ -64,7 +69,17 @@ option = {
         data: currentData,
         type: 'line'
     }
-    ]
+    ],
+    animation: true,
+    animationThreshold: 10000,
+    animationDurationUpdate: 1000,
+    /* animationDelayUpdate: 1, */
+    animationEasingUpdate:  "cubicInOut",
+    stateAnimation :{
+        duration: 2000,
+    },
+    progressive: 2000,
+
 };
 
 if (option && typeof option === 'object') {
