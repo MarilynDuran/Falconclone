@@ -53,17 +53,19 @@
   position: absolute;
   top: 30px; /* Ajusta la posición según tus necesidades */
   left: 0px; /* Este será el valor inicial para ocultar la navbar */
-  width: 50px; /* Ancho inicial */
+  width: 25px; /* Ancho inicial */
   background-color: #EDF2F996;
-  padding: 10px;
   transition: left 0.3s ease; /* Transición para suavizar el desplazamiento */
   border: 1px black;
   font-family: var(--font-family-sans-serif);
+  overflow-x: hidden;
+  transition: width .2s ease-in-out;
 }
 
 .vertical-menu .menu-icons {
   list-style-type: none;
   padding: 0;
+  width: 200px;
 }
 
 
@@ -85,7 +87,6 @@
 .menu-icons li svg {
   width: 1rem;
 }
-
 
 /* CSS para la barra de navegación con anchura estrecha */
 .navbar.narrow {
@@ -124,29 +125,41 @@ summary::marker {
 
 summary {
   position: relative;
+  transition: margin-bottom .3s ease-out;
+}
+
+details[open] > summary {
+  margin-bottom: 10px;
 }
 
 .navbar.active summary::after {
   content: '';
-    display: block;
-    position: absolute;
-    right: 5px;
-    height: 0.4rem;
-    width: 0.4rem;
-    border-right: 1px solid #5e6e82;
-    border-bottom: 1px solid #5e6e82;
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
-    transition: all .2s ease-in-out;
-    transform-origin: center;
-    transition-property: transform;
+  display: block;
+  position: absolute;
+  right: 5px;
+  height: 0.4rem;
+  width: 0.4rem;
+  border-right: 1px solid #5e6e82;
+  border-bottom: 1px solid #5e6e82;
+  border-color: inherit;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  transition: all .2s ease-in-out;
+  transform-origin: center;
+  transition-property: transform;
 }
 
 .navbar.active details[open] > summary::after {
   transform: translateY(-50%) rotate(225deg);
 }
 
+.navbar:not(.active) details ul{
+  display: none;
+}
 
+.navbar:not(.active) summary{
+  margin-bottom: 0;
+}
 
 .navbar.active details[open] ul li details[open] summary::after{
   transform: translateY(-50%) rotate(225deg);
