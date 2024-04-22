@@ -72,10 +72,19 @@ header {
         .icon-px {
             height: 32px;
             width: 32px;
+            position: relative;
         }
         
         .settings-svg {
             margin-bottom: -2px;
+        }
+
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
         }
         
     }
