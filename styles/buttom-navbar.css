@@ -1,0 +1,267 @@
+/* .container {
+  max-width: 1480px;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+*/
+
+.navbar {
+  margin-left: 200px;
+  position: relative;
+  z-index: 5;
+}
+
+.boton .menu-btn {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.boton .btn-line {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  transition: width 0.3s ease;
+}
+
+.boton #line1 {
+  top: 0;
+  width: 80%;
+}
+
+.boton #line2 {
+  top: 50%;
+  width: 50%;
+}
+
+.boton #line3 {
+  bottom: 0;
+  width: 70%;
+}
+
+.menu-btn.active #line1,
+.menu-btn.active #line2,
+.menu-btn.active #line3 {
+  width: 100%;
+}
+
+
+
+.vertical-menu .navbar {
+  position: absolute;
+  top: 10px; /* Ajusta la posición según tus necesidades */
+  left: 0px; /* Este será el valor inicial para ocultar la navbar */
+  width: 25px; /* Ancho inicial */
+  background-color: #EDF2F996;
+  transition: left 0.3s ease; /* Transición para suavizar el desplazamiento */
+  border: 1px black;
+  border-radius: 20;
+  font-family: var(--font-family-sans-serif);
+  overflow-x: hidden;
+  transition: width .2s ease-in-out;
+  transition: background-color .2s ease-in-out;
+}
+
+.vertical-menu .menu-icons {
+  list-style-type: none;
+  padding: 0;
+  width: 200px;
+}
+
+
+
+.vertical-menu .menu-icons li {
+  margin-bottom: 10px;
+}
+
+.vertical-menu .menu-text {
+  list-style-type: none;
+  padding: 0;
+}
+
+.vertical-menu .menu-text li {
+  margin-bottom: 10px;
+  display: none; /* Oculta los nombres de las secciones inicialmente */
+}
+
+.menu-icons li svg {
+  width: 1rem;
+}
+
+/* CSS para la barra de navegación con anchura estrecha */
+.navbar.narrow {
+  width: 200px; /* Define la anchura estrecha */
+  background-color: #EDF2F996;
+}
+
+.menu-icons .menu-text-nodropdown { 
+  margin-left: 10px; /* Espacio entre el ícono y el texto */
+  transition: opacity 300ms ease-out
+}
+
+.menu-icons .menu-text {
+  margin-left: 10px; /* Espacio entre el ícono y el texto */
+  transition: opacity 300ms ease-out
+}
+
+/* Ocultar texto cuando el botón no está activo (estrecho) */
+.menu-icons li  details summary .menu-text {
+  opacity: 0; /* Ocultar el texto */
+}
+
+/* Mostrar texto solo cuando el botón está activo (ampliado) */
+.navbar.active .menu-icons li details summary .menu-text {
+  opacity: 1; /* Mostrar el texto en línea */
+}
+
+.menu-icons li  .menu-text-nodropdown {
+  opacity: 0; /* Ocultar el texto */
+}
+
+/* Mostrar texto solo cuando el botón está activo (ampliado) */
+.navbar.active .menu-icons li .menu-text-nodropdown {
+  opacity: 1; /* Mostrar el texto en línea */
+  margin-left: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.navbar.active summary::marker {
+  content: '';
+}
+
+summary::marker {
+  content: '';
+}
+
+summary {
+  position: relative;
+  transition: margin-bottom .3s ease-out;
+}
+
+details[open] > summary {
+  margin-bottom: 10px;
+}
+
+.navbar.active summary::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 5px;
+  height: 0.4rem;
+  width: 0.4rem;
+  border-right: 1px solid #5e6e82;
+  border-bottom: 1px solid #5e6e82;
+  border-color: inherit;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  transition: all .2s ease-in-out;
+  transform-origin: center;
+  transition-property: transform;
+}
+
+.navbar.active details[open] > summary::after {
+  transform: translateY(-50%) rotate(225deg);
+}
+
+.navbar:not(.active) details ul{
+  display: none;
+}
+
+.navbar:not(.active) summary{
+  margin-bottom: 0;
+}
+
+.navbar.active details[open] ul li details[open] summary::after{
+  transform: translateY(-50%) rotate(225deg);
+} 
+
+.navbar.active details[open] ul li{
+  font-size: small;
+  font-weight: 500;
+}
+
+.navbar.active hr{
+  display: block;
+  position: relative;
+}
+
+hr{
+  width: 100%;
+}
+
+li::marker {
+  content: '';
+}
+
+.opened li{
+  text-decoration: none;
+}
+
+.menu-text-nodropdown {
+  margin-left: 10px;
+}
+
+
+.menu-icons li span {
+  cursor: pointer;
+}
+
+
+.vertical-menu{
+  svg{
+    cursor: pointer;
+  }
+  
+  span{
+    cursor: pointer;
+  }
+  
+  li{
+    cursor: pointer;
+  }
+  .menu-text{
+    font-size: .875rem;
+    font-weight: 500;
+  }
+
+  .menu-text-nodropdown{
+    font-size: .875rem;
+    font-weight: 500;
+  }
+  
+}
+
+
+
+
+.purchase-button{
+  display: none;
+  text-align: center;
+}
+
+.navbar.active .purchase-button{
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+
+}
+
+.hover:hover{
+  color:#232e3c;
+}
+
+summary:hover{
+  color:#232e3c;
+}
+
+.hover-black:hover{
+  color:#232e3c;
+}
