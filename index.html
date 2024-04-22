@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/styles/card-format.css" />
-    <link rel="stylesheet" href="/styles/visual-elements.css" />
-    <link rel="stylesheet" href="/styles/basicstyles.css" />
-    <link rel="stylesheet" href="/styles/font-styles.css" />
+    <link rel="stylesheet" href="./styles/card-format.css" />
+    <link rel="stylesheet" href="./styles/total-sales.css"/>
+    <link rel="stylesheet" href="./styles/visual-elements.css" />
+    <link rel="stylesheet" href="./styles/basicstyles.css" />
+    <link rel="stylesheet" href="./styles/font-styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,184 +24,211 @@
   </head>
   <body>
     <div class="global-organization-cards">
-      <div class="card-shadow running-card">
+       <div class="card-shadow running-card">
         <!-- CARD HEADER -->
-        <div
-          class="background-light running-card-header align-items-center row"
-        >
-          <div class="running-header-text">
-            <h6>Running Proyects</h6>
+        <div class="background-light running-card-header align-items-center row">
+            <div class="running-header-text">
+              <h6>Running Proyects</h6>
+            </div>
+            <div class="select-position">
+              <select>
+                <option>Working Time</option>
+                <option>Estimated Time</option>
+                <option>Billable Time</option>
+              </select>
+            </div>
           </div>
-          <div class="select-position">
-            <select>
-              <option>Working Time</option>
-              <option>Estimated Time</option>
-              <option>Billable Time</option>
+          <!-- CARD BODY -->
+
+          <div class="body-row row align-items-center">
+            <div class="body-content">
+              <div class="left-body">
+                <div class="left-letter">
+                  <div class="circle" style="background-color: #fef0e8">
+                    <span style="color: #f5803e; font-weight: 600">P</span>
+                  </div>
+                </div>
+                <div class="name-pill-container">
+                  <div class="project-name">
+                    <span href="#">Raven Pro</span>
+                  </div>
+                  <div class="pill">
+                    <span>38%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="right-body">
+                <div class="right-format">
+                  <div class="numbers-container">
+                    <div class="numbers-style">12:50:00</div>
+                  </div>
+                  <div class="line-container">
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 38%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="body-content">
+              <div class="left-body">
+                <div class="left-letter">
+                  <div class="circle" style="background-color: #e5f7ff">
+                    <span style="color: #27bcfd; font-weight: 600;">B</span>
+                  </div>
+                </div>
+                <div class="name-pill-container">
+                  <div class="project-name">
+                    <span href="#">Boots4</span>
+                  </div>
+                  <div class="pill">
+                    <span>79%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="right-body">
+                <div class="right-format">
+                  <div class="numbers-container">
+                    <div class="numbers-style">25:20:00</div>
+                  </div>
+                  <div class="line-container">
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 79%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="body-content">
+              <div class="left-body">
+                <div class="left-letter">
+                  <div class="circle" style="background-color: #e6effc">
+                    <span style="color: #2c7be5; font-weight: 600;">F</span>
+                  </div>
+                </div>
+                <div class="name-pill-container">
+                  <div class="project-name">
+                    <span href="#">Falcon</span>
+                  </div>
+                  <div class="pill">
+                    <span>90%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="right-body">
+                <div class="right-format">
+                  <div class="numbers-container">
+                    <div class="numbers-style">58:20:00</div>
+                  </div>
+                  <div class="line-container">
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 90%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="body-content">
+              <div class="left-body">
+                <div class="left-letter">
+                  <div class="circle" style="background-color: #fce7eb">
+                    <span style="color: #e63757; font-weight: 600;">S</span>
+                  </div>
+                </div>
+                <div class="name-pill-container">
+                  <div class="project-name">
+                    <span href="#">Slick</span>
+                  </div>
+                  <div class="pill">
+                    <span>40%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="right-body">
+                <div class="right-format">
+                  <div class="numbers-container">
+                    <div class="numbers-style">21:20:00</div>
+                  </div>
+                  <div class="line-container">
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 40%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="body-content">
+              <div class="left-body">
+                <div class="left-letter">
+                  <div class="circle" style="background-color: #e0faef">
+                    <span style="color: #00d27a; font-weight: 600;">R</span>
+                  </div>
+                </div>
+                <div class="name-pill-container">
+                  <div class="project-name">
+                    <span href="#">Reign Pro</span>
+                  </div>
+                  <div class="pill">
+                    <span>78%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="right-body">
+                <div class="right-format">
+                  <div class="numbers-container">
+                    <div class="numbers-style">31:50:00</div>
+                  </div>
+                  <div class="line-container">
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 78%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="bottom">
+            <div class="text-format">
+              <span href="#">Show all proyects</span>
+              <span class="bold">></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bigCard-global">
+          <!--Header Tarjeta-->
+          <div class="bigCard-header">
+            <h6>Total Sales</h6>
+            <select id="totalMonthSelect">
+              <option value="0">January</option>
+              <option value="1">February</option>
+              <option value="2">March</option>
+              <option value="3">April</option>
+              <option value="4">May</option>
+              <option value="5">June</option>
+              <option value="6">July</option>
+              <option value="7">August</option>
+              <option value="8">September</option>
+              <option value="9">October</option>
+              <option value="10">November</option>
+              <option value="11">December</option>
             </select>
           </div>
-        </div>
-        <!-- CARD BODY -->
-
-        <div class="body-row row align-items-center">
-          <div class="body-content">
-            <div class="left-body">
-              <div class="left-letter">
-                <div class="circle" style="background-color: #fef0e8">
-                  <span style="color: #f5803e; font-weight: 600">P</span>
-                </div>
-              </div>
-              <div class="name-pill-container">
-                <div class="project-name">
-                  <span href="#">Raven Pro</span>
-                </div>
-                <div class="pill">
-                  <span>38%</span>
-                </div>
-              </div>
-            </div>
-            <div class="right-body">
-              <div class="right-format">
-                <div class="numbers-container">
-                  <div class="numbers-style">12:50:00</div>
-                </div>
-                <div class="line-container">
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 38%;"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="body-content">
-            <div class="left-body">
-              <div class="left-letter">
-                <div class="circle" style="background-color: #e5f7ff">
-                  <span style="color: #27bcfd; font-weight: 600;">B</span>
-                </div>
-              </div>
-              <div class="name-pill-container">
-                <div class="project-name">
-                  <span href="#">Boots4</span>
-                </div>
-                <div class="pill">
-                  <span>79%</span>
-                </div>
-              </div>
-            </div>
-            <div class="right-body">
-              <div class="right-format">
-                <div class="numbers-container">
-                  <div class="numbers-style">25:20:00</div>
-                </div>
-                <div class="line-container">
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 79%;"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="body-content">
-            <div class="left-body">
-              <div class="left-letter">
-                <div class="circle" style="background-color: #e6effc">
-                  <span style="color: #2c7be5; font-weight: 600;">F</span>
-                </div>
-              </div>
-              <div class="name-pill-container">
-                <div class="project-name">
-                  <span href="#">Falcon</span>
-                </div>
-                <div class="pill">
-                  <span>90%</span>
-                </div>
-              </div>
-            </div>
-            <div class="right-body">
-              <div class="right-format">
-                <div class="numbers-container">
-                  <div class="numbers-style">58:20:00</div>
-                </div>
-                <div class="line-container">
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 90%;"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="body-content">
-            <div class="left-body">
-              <div class="left-letter">
-                <div class="circle" style="background-color: #fce7eb">
-                  <span style="color: #e63757; font-weight: 600;">S</span>
-                </div>
-              </div>
-              <div class="name-pill-container">
-                <div class="project-name">
-                  <span href="#">Slick</span>
-                </div>
-                <div class="pill">
-                  <span>40%</span>
-                </div>
-              </div>
-            </div>
-            <div class="right-body">
-              <div class="right-format">
-                <div class="numbers-container">
-                  <div class="numbers-style">21:20:00</div>
-                </div>
-                <div class="line-container">
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 40%;"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="body-content">
-            <div class="left-body">
-              <div class="left-letter">
-                <div class="circle" style="background-color: #e0faef">
-                  <span style="color: #00d27a; font-weight: 600;">R</span>
-                </div>
-              </div>
-              <div class="name-pill-container">
-                <div class="project-name">
-                  <span href="#">Reign Pro</span>
-                </div>
-                <div class="pill">
-                  <span>78%</span>
-                </div>
-              </div>
-            </div>
-            <div class="right-body">
-              <div class="right-format">
-                <div class="numbers-container">
-                  <div class="numbers-style">31:50:00</div>
-                </div>
-                <div class="line-container">
-                  <div class="progress-bar">
-                    <div class="progress" style="width: 78%;"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-
-        <div class="bottom">
-          <div class="text-format">
-            <span href="#">Show all proyects</span>
-            <span class="bold">></span>
+          <!-- Contenido Tarjeta -->
+          <div class="bigCard-content">
+            <div id="container" style="height: 100%; width: 100%;"></div>
           </div>
         </div>
       </div>
-    </div>
+
+      
+      <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+      <script type="text/javascript" src="./scripts/scriptTotalSales.js"></script>
   </body>
 </html>

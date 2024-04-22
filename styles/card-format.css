@@ -1,6 +1,9 @@
 .global-organization-cards {
   max-width: 1400px;
   justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
 
   .card-shadow {
     box-shadow: 0 7px 14px 0 rgba(59, 65, 94, 0.1),
