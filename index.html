@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,186 +22,221 @@
     <title>Falcon Vanilla | VanillaJS Dashboard & WebApp Template</title>
   </head>
   <body>
-    <div class="first-4-grid">
-      <!-- PRIMERA TARJETA -->
 
-      <div class="card-global">
-        <!-- PARTE SUPERIOR DE LA TARJETA -->
-        <div class="card-header">
-          <h6>Weekly Sales</h6>
-          <div class="interrogation-svg" id="interrogation-svg">
-            <svg
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="far"
-              data-icon="question-circle"
-              class="svg-inline--fa fa-question-circle fa-w-16 text-400"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-              id="weeklySalesTooltip"
-              style="transform-origin: 0.5em 0.5em"
-              width="512"
-              height="512"
-            >
-              <g transform="translate(256 256)">
-                <g
-                  transform="translate(0, 0)  scale(0.9375, 0.9375)  rotate(0 0 0)"
-                >
-                  <path
-                    fill="#B6C1D2"
-                    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 448c-110.532 0-200-89.431-200-200 0-110.495 89.472-200 200-200 110.491 0 200 89.471 200 200 0 110.53-89.431 200-200 200zm107.244-255.2c0 67.052-72.421 68.084-72.421 92.863V300c0 6.627-5.373 12-12 12h-45.647c-6.627 0-12-5.373-12-12v-8.659c0-35.745 27.1-50.034 47.579-61.516 17.561-9.845 28.324-16.541 28.324-29.579 0-17.246-21.999-28.693-39.784-28.693-23.189 0-33.894 10.977-48.942 29.969-4.057 5.12-11.46 6.071-16.666 2.124l-27.824-21.098c-5.107-3.872-6.251-11.066-2.644-16.363C184.846 131.491 214.94 112 261.794 112c49.071 0 101.45 38.304 101.45 88.8zM298 368c0 23.159-18.841 42-42 42s-42-18.841-42-42 18.841-42 42-42 42 18.841 42 42z"
-                    transform="translate(-256 -256)"
-                  ></path>
+    <div class="content">
+      <header>
+        <div class="left">
+          <div class="logo">
+            <div class="img-logo">
+              <img src="./src/img/falcon.920a9ff0.png">
+            </div>
+            <div class="title-logo">
+              <span>falcon</span>
+            </div>
+          </div>
+          <div class="search">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16 position-absolute text-400 search-box-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+            <input type="search" placeholder="Search..." />
+          </div>
+        </div>
+        <div class="right">
+          <div class="settings-svg icon-px">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.7369 12.3941L19.1989 12.1065C18.4459 11.7041 18.0843 10.8487 18.0843 9.99495C18.0843 9.14118 18.4459 8.28582 19.1989 7.88336L19.7369 7.59581C19.9474 7.47484 20.0316 7.23291 19.9474 7.03131C19.4842 5.57973 18.6843 4.28943 17.6738 3.20075C17.5053 3.03946 17.2527 2.99914 17.0422 3.12011L16.393 3.46714C15.6883 3.84379 14.8377 3.74529 14.1476 3.3427C14.0988 3.31422 14.0496 3.28621 14.0002 3.25868C13.2568 2.84453 12.7055 2.10629 12.7055 1.25525V0.70081C12.7055 0.499202 12.5371 0.297594 12.2845 0.257272C10.7266 -0.105622 9.16879 -0.0653007 7.69516 0.257272C7.44254 0.297594 7.31623 0.499202 7.31623 0.70081V1.23474C7.31623 2.09575 6.74999 2.8362 5.99824 3.25599C5.95774 3.27861 5.91747 3.30159 5.87744 3.32493C5.15643 3.74527 4.26453 3.85902 3.53534 3.45302L2.93743 3.12011C2.72691 2.99914 2.47429 3.03946 2.30587 3.20075C1.29538 4.28943 0.495411 5.57973 0.0322686 7.03131C-0.051939 7.23291 0.0322686 7.47484 0.242788 7.59581L0.784376 7.8853C1.54166 8.29007 1.92694 9.13627 1.92694 9.99495C1.92694 10.8536 1.54166 11.6998 0.784375 12.1046L0.242788 12.3941C0.0322686 12.515 -0.051939 12.757 0.0322686 12.9586C0.495411 14.4102 1.29538 15.7005 2.30587 16.7891C2.47429 16.9504 2.72691 16.9907 2.93743 16.8698L3.58669 16.5227C4.29133 16.1461 5.14131 16.2457 5.8331 16.6455C5.88713 16.6767 5.94159 16.7074 5.99648 16.7375C6.75162 17.1511 7.31623 17.8941 7.31623 18.7552V19.2891C7.31623 19.4425 7.41373 19.5959 7.55309 19.696C7.64066 19.7589 7.74815 19.7843 7.85406 19.8046C9.35884 20.0925 10.8609 20.0456 12.2845 19.7729C12.5371 19.6923 12.7055 19.4907 12.7055 19.2891V18.7346C12.7055 17.8836 13.2568 17.1454 14.0002 16.7312C14.0496 16.7037 14.0988 16.6757 14.1476 16.6472C14.8377 16.2446 15.6883 16.1461 16.393 16.5227L17.0422 16.8698C17.2527 16.9907 17.5053 16.9504 17.6738 16.7891C18.7264 15.7005 19.4842 14.4102 19.9895 12.9586C20.0316 12.757 19.9474 12.515 19.7369 12.3941ZM10.0109 13.2005C8.1162 13.2005 6.64257 11.7893 6.64257 9.97478C6.64257 8.20063 8.1162 6.74905 10.0109 6.74905C11.8634 6.74905 13.3792 8.20063 13.3792 9.97478C13.3792 11.7893 11.8634 13.2005 10.0109 13.2005Z" fill="#2A7BE4"></path></svg>
+          </div>
+          <div class="shopping-cart icon-px">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" class="svg-inline--fa fa-shopping-cart fa-w-18 fs-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="transform-origin: 0.5625em 0.5em;"><g transform="translate(288 256)"><g transform="translate(0, 0)  scale(0.5625, 0.5625)  rotate(0 0 0)"><path fill="currentColor" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z" transform="translate(-288 -256)"></path></g></g></svg>
+          </div>
+          <div class="notifications icon-px">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell" class="svg-inline--fa fa-bell fa-w-14 fs-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="transform-origin: 0.4375em 0.5em;"><g transform="translate(224 256)"><g transform="translate(0, 0)  scale(0.625, 0.625)  rotate(0 0 0)"><path fill="currentColor" d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z" transform="translate(-224 -256)"></path></g></g></svg>
+          </div>
+          <div class="profile-photo">
+            <img class="rounded icon-px" src="./src/img/123.png"/>
+          </div>
+        </div>
+      </header>
+    
+
+      <div class="first-4-grid">
+        <!-- PRIMERA TARJETA -->
+
+        <div class="card-global">
+          <!-- PARTE SUPERIOR DE LA TARJETA -->
+          <div class="card-header">
+            <h6>Weekly Sales</h6>
+            <div class="interrogation-svg" id="interrogation-svg">
+              <svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="far"
+                data-icon="question-circle"
+                class="svg-inline--fa fa-question-circle fa-w-16 text-400"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                id="weeklySalesTooltip"
+                style="transform-origin: 0.5em 0.5em"
+                width="512"
+                height="512"
+              >
+                <g transform="translate(256 256)">
+                  <g
+                    transform="translate(0, 0)  scale(0.9375, 0.9375)  rotate(0 0 0)"
+                  >
+                    <path
+                      fill="#B6C1D2"
+                      d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 448c-110.532 0-200-89.431-200-200 0-110.495 89.472-200 200-200 110.491 0 200 89.471 200 200 0 110.53-89.431 200-200 200zm107.244-255.2c0 67.052-72.421 68.084-72.421 92.863V300c0 6.627-5.373 12-12 12h-45.647c-6.627 0-12-5.373-12-12v-8.659c0-35.745 27.1-50.034 47.579-61.516 17.561-9.845 28.324-16.541 28.324-29.579 0-17.246-21.999-28.693-39.784-28.693-23.189 0-33.894 10.977-48.942 29.969-4.057 5.12-11.46 6.071-16.666 2.124l-27.824-21.098c-5.107-3.872-6.251-11.066-2.644-16.363C184.846 131.491 214.94 112 261.794 112c49.071 0 101.45 38.304 101.45 88.8zM298 368c0 23.159-18.841 42-42 42s-42-18.841-42-42 18.841-42 42-42 42 18.841 42 42z"
+                      transform="translate(-256 -256)"
+                    ></path>
+                  </g>
                 </g>
-              </g>
-            </svg>
-          </div>
-        </div>
-        <!-- PARTE INFERIOR DE LA TARJETA -->
-        <div class="card-content">
-          <!-- DATOS IZQUIERDA -->
-          <div class="left-container">
-            <div class="left-content1">
-              <p class="paragraph-percentage">$43K</p>
-              <span>+3,5%</span>
+              </svg>
             </div>
           </div>
-          <!-- TABLA DERECHA -->
-          <div class="right-container">
-            <div id="weekly-chart" style="width: 136px; height: 61px"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SEGUNDA TARJETA -->
-
-      <div class="card-global">
-        <!-- PARTE SUPERIOR DE LA TARJETA -->
-        <div class="card-header">
-          <h6>Total Orders</h6>
-        </div>
-        <!-- PARTE INFERIOR DE LA TARJETA -->
-        <div class="card-content">
-          <!-- DATOS IZQUIERDA -->
-          <div class="left-container">
-            <div class="left-content">
-              <p>58.4K</p>
-              <span>↑13.6%</span>
-            </div>
-          </div>
-          <!-- TABLA DERECHA -->
-          <div class="right-container">
-            <div
-              id="total-order-chart"
-              style="width: 136px; height: 61px"
-            ></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- TERCERA TARJETA -->
-
-      <div class="card-global">
-        <div class="mk-shr-card-content">
-          <div class="mk-shr-left">
-            <h6>Market Share</h6>
-            <div class="mk-shr-brands">
-              <div class="mk-shr-onebrand">
-                <div>
-                  <span
-                    class="dot"
-                    style="background-color: rgb(44, 123, 229)"
-                  ></span>
-                  <span class="mk-brand-fontstyle">Samsung</span>
-                </div>
-                <div class="mk-percentage">
-                  <span>58%</span>
-                </div>
-              </div>
-              <div class="mk-shr-onebrand">
-                <div>
-                  <span
-                    class="dot"
-                    style="background-color: rgb(39, 188, 253)"
-                  ></span>
-                  <span class="mk-brand-fontstyle">Huawei</span>
-                </div>
-                <div class="mk-percentage">
-                  <span>21%</span>
-                </div>
-              </div>
-              <div class="mk-shr-onebrand">
-                <div>
-                  <span
-                    class="dot"
-                    style="background-color: rgb(216, 226, 239)"
-                  ></span>
-                  <span class="mk-brand-fontstyle">Apple</span>
-                </div>
-                <div class="mk-percentage">
-                  <span>22%</span>
-                </div>
+          <!-- PARTE INFERIOR DE LA TARJETA -->
+          <div class="card-content">
+            <!-- DATOS IZQUIERDA -->
+            <div class="left-container">
+              <div class="left-content1">
+                <p class="paragraph-percentage">$43K</p>
+                <span>+3,5%</span>
               </div>
             </div>
-          </div>
-          <div class="mk-chart-container">
-            <div id="mk-shr-chart" style="width: 106px; height: 106px"></div>
-            <div class="mk-num-chart">
-              <span>92M</span>
+            <!-- TABLA DERECHA -->
+            <div class="right-container">
+              <div id="weekly-chart" style="width: 136px; height: 61px"></div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- CUARTA TARJETA -->
+        <!-- SEGUNDA TARJETA -->
 
-      <div class="card-global">
-        <!-- PARTE SUPERIOR DE LA TARJETA -->
-        <div class="card-header-weather">
-          <h6>Weather</h6>
-          <button type="buttom" class="weather-buttom-style">
-            <svg
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="ellipsis-h"
-              class="svg-inline--fa fa-ellipsis-h fa-w-16 fs--2"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-              width="512"
-              height="512"
-            >
-              <path
-                fill="#748194"
-                d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"
-              ></path>
-            </svg>
-          </button>
+        <div class="card-global">
+          <!-- PARTE SUPERIOR DE LA TARJETA -->
+          <div class="card-header">
+            <h6>Total Orders</h6>
+          </div>
+          <!-- PARTE INFERIOR DE LA TARJETA -->
+          <div class="card-content">
+            <!-- DATOS IZQUIERDA -->
+            <div class="left-container">
+              <div class="left-content">
+                <p>58.4K</p>
+                <span>↑13.6%</span>
+              </div>
+            </div>
+            <!-- TABLA DERECHA -->
+            <div class="right-container">
+              <div
+                id="total-order-chart"
+                style="width: 136px; height: 61px"
+              ></div>
+            </div>
+          </div>
         </div>
-        <!-- PARTE INFERIOR DE LA TARJETA -->
-        <div>
-          <div class="weather-cardbody">
-            <div class="weather-content">
-              <div class="weather-left-container" id="weather-left-container">
-                <!-- <img
-                  src="src/public/img-pablo-1.png"
-                  style="width: 60px; height: 60px; margin-right: 1rem"
-                /> -->
-                <div class="weather-text" id="weather-text">
-                  <!-- <h6>New York City</h6> -->
-                  <!-- <div class="orange-text">"Sunny"</div> -->
-                  <!-- <div class="grey-text-weather">Precipitation: 50%</div> -->
+
+        <!-- TERCERA TARJETA -->
+
+        <div class="card-global">
+          <div class="mk-shr-card-content">
+            <div class="mk-shr-left">
+              <h6>Market Share</h6>
+              <div class="mk-shr-brands">
+                <div class="mk-shr-onebrand">
+                  <div>
+                    <span
+                      class="dot"
+                      style="background-color: rgb(44, 123, 229)"
+                    ></span>
+                    <span class="mk-brand-fontstyle">Samsung</span>
+                  </div>
+                  <div class="mk-percentage">
+                    <span>58%</span>
+                  </div>
+                </div>
+                <div class="mk-shr-onebrand">
+                  <div>
+                    <span
+                      class="dot"
+                      style="background-color: rgb(39, 188, 253)"
+                    ></span>
+                    <span class="mk-brand-fontstyle">Huawei</span>
+                  </div>
+                  <div class="mk-percentage">
+                    <span>21%</span>
+                  </div>
+                </div>
+                <div class="mk-shr-onebrand">
+                  <div>
+                    <span
+                      class="dot"
+                      style="background-color: rgb(216, 226, 239)"
+                    ></span>
+                    <span class="mk-brand-fontstyle">Apple</span>
+                  </div>
+                  <div class="mk-percentage">
+                    <span>22%</span>
+                  </div>
                 </div>
               </div>
-              <div class="weather-temperature" id="weather-temperature">
-                <div class="temp-blue-upper" id="temp-blue-upper">
-                  <!-- <span>31°</span> -->
+            </div>
+            <div class="mk-chart-container">
+              <div id="mk-shr-chart" style="width: 106px; height: 106px"></div>
+              <div class="mk-num-chart">
+                <span>92M</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CUARTA TARJETA -->
+
+        <div class="card-global">
+          <!-- PARTE SUPERIOR DE LA TARJETA -->
+          <div class="card-header-weather">
+            <h6>Weather</h6>
+            <button type="buttom" class="weather-buttom-style">
+              <svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="ellipsis-h"
+                class="svg-inline--fa fa-ellipsis-h fa-w-16 fs--2"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                width="512"
+                height="512"
+              >
+                <path
+                  fill="#748194"
+                  d="M328 256c0 39.8-32.2 72-72 72s-72-32.2-72-72 32.2-72 72-72 72 32.2 72 72zm104-72c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72zm-352 0c-39.8 0-72 32.2-72 72s32.2 72 72 72 72-32.2 72-72-32.2-72-72-72z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <!-- PARTE INFERIOR DE LA TARJETA -->
+          <div>
+            <div class="weather-cardbody">
+              <div class="weather-content">
+                <div class="weather-left-container" id="weather-left-container">
+                  <!-- <img
+                    src="src/public/img-pablo-1.png"
+                    style="width: 60px; height: 60px; margin-right: 1rem"
+                  /> -->
+                  <div class="weather-text" id="weather-text">
+                    <!-- <h6>New York City</h6> -->
+                    <!-- <div class="orange-text">"Sunny"</div> -->
+                    <!-- <div class="grey-text-weather">Precipitation: 50%</div> -->
+                  </div>
                 </div>
-                <!-- <div class="temp-gray-down" id="temp-gray-down">32° / 25°</div> -->
+                <div class="weather-temperature" id="weather-temperature">
+                  <div class="temp-blue-upper" id="temp-blue-upper">
+                    <!-- <span>31°</span> -->
+                  </div>
+                  <!-- <div class="temp-gray-down" id="temp-gray-down">32° / 25°</div> -->
+                </div>
               </div>
             </div>
           </div>
