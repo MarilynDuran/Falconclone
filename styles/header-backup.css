@@ -52,6 +52,9 @@ header {
 
         svg{
             width: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         input {
@@ -59,6 +62,7 @@ header {
             border-color: #d8e2ef;
             font-size: 1rem;
             font-family: var(--font-family-sans-serif);
+            margin-left: 20px;
         }
     }
 
@@ -73,6 +77,7 @@ header {
             height: 32px;
             width: 32px;
             position: relative;
+            cursor: pointer;
         }
         
         .settings-svg {
@@ -85,6 +90,7 @@ header {
             left: 50%;
             transform: translate(-50%, -50%);
             width: 100%;
+            cursor: pointer;
         }
         
     }

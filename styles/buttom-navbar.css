@@ -9,8 +9,9 @@
 }
 */
 
+
 .navbar {
-  margin-left: 200px;
+  margin-left: 180px;
   position: relative;
   z-index: 5;
 }
@@ -69,14 +70,15 @@
   overflow-x: hidden;
   transition: width .2s ease-in-out;
   transition: background-color .2s ease-in-out;
+  
 }
 
 .vertical-menu .menu-icons {
   list-style-type: none;
   padding: 0;
   width: 200px;
+  padding-top: 20px;
 }
-
 
 
 .vertical-menu .menu-icons li {
